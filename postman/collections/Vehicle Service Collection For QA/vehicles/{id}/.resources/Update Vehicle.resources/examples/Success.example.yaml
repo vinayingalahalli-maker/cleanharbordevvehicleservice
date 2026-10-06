@@ -1,0 +1,20 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/vehicles/:id"
+  method: PUT
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: "2"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "message": "this is good request"
+      }
+order: 1000

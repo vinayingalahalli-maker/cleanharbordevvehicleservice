@@ -1,0 +1,5 @@
+name: Vehicle Service Mock Enivronment
+values:
+  - key: baseUrl
+    value: https://f18b20fa-e5ad-4940-bf90-a2ae1a215e84.mock.pstmn.io
+color: 300

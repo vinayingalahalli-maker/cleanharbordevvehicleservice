@@ -1,0 +1,40 @@
+$kind: http-request
+url: "{{baseUrl}}/vehicles/:id"
+method: PUT
+headers:
+  Accept: application/json
+  Content-Type: application/json
+pathVariables:
+  id: "2"
+body:
+  type: text
+  content: |-
+    {
+      "nickName": "The Lisa Marie",
+      "vin": "4M2DV11W4RDJ53329",
+      "make": "Mercury",
+      "model": "Villager",
+      "year": "1994",
+      "miles": 159999
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response has JSON body", function () {
+          pm.response.to.be.json;
+      });
+
+      pm.test("Response contains vehicle fields", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("vin");
+          pm.expect(json).to.have.property("make");
+          pm.expect(json).to.have.property("model");
+      });
+    language: text/javascript
+settings: {}
+examples: ./.resources/Update Vehicle.resources/examples
+order: 5000

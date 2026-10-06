@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vehicle_service_collection_sdk"
+version = "1.0.0"
+description = """This collection covers the core CRUD operations for the **Vehicle Service API**, providing a complete set of endpoints to create, retrieve, update, and delete vehicle resources.\n\n### Endpoints\n\n| Method | Endpoint | Description |\n|--------|----------|-------------|\n| `POST` | `/vehicles` | Create a new vehicle |\n| `GET` | `/vehicles/:id` | Retrieve a vehicle by its ID |\n| `PATCH` | `/vehicles/:id` | Partially update an existing vehicle |\n| `PUT` | `/vehicles/:id` | Fully replace an existing vehicle |\n| `DELETE` | `/vehicles/:id` | Delete a vehicle by its ID |\n\n### Response Coverage\n\nEach request includes saved examples that cover both success and error scenarios:\n\n- **2xx** — `200 Success`, `201 Created`, `204 No Content`\n- **4xx** — `400 Missing/Bad Request`, `404 Not Found`, `409 Conflict (Vehicle already exists)`\n- **5xx** — `500 Unexpected Error`\n\nThis makes the collection well-suited for both active development and mock server usage.\n\n### Configuration\n\nAll requests use the `{{baseUrl}}` variable. Make sure your active environment has `baseUrl` set to the correct server URL before sending requests."""
+readme = "PyPI_README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0.0,<3.0.0"
+]

@@ -1,0 +1,5 @@
+name: Local Enivronment
+values:
+  - key: baseUrl
+    value: 'http://localhost:9000'
+color: 60

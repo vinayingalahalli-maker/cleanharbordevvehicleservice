@@ -1,0 +1,42 @@
+$kind: collection
+description: |-
+  This collection covers the core CRUD operations for the **Vehicle Service API**, providing a complete set of endpoints to create, retrieve, update, and delete vehicle resources.
+
+  ### Endpoints
+
+  | Method | Endpoint | Description |
+  |--------|----------|-------------|
+  | `POST` | `/vehicles` | Create a new vehicle |
+  | `GET` | `/vehicles/:id` | Retrieve a vehicle by its ID |
+  | `PATCH` | `/vehicles/:id` | Partially update an existing vehicle |
+  | `PUT` | `/vehicles/:id` | Fully replace an existing vehicle |
+  | `DELETE` | `/vehicles/:id` | Delete a vehicle by its ID |
+
+  ### Response Coverage
+
+  Each request includes saved examples that cover both success and error scenarios:
+
+  - **2xx** — `200 Success`, `201 Created`, `204 No Content`
+  - **4xx** — `400 Missing/Bad Request`, `404 Not Found`, `409 Conflict (Vehicle already exists)`
+  - **5xx** — `500 Unexpected Error`
+
+  This makes the collection well-suited for both active development and mock server usage.
+
+  ### Configuration
+
+  All requests use the `{{baseUrl}}` variable. Make sure your active environment has `baseUrl` set to the correct server URL before sending requests.
+variables:
+  baseUrl: "{{baseUrl}}"
+scripts:
+  - type: http:afterResponse
+    code: |-
+      pm.test("Status code is 200, 201, or 204", function () {
+          pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);
+      });
+    language: text/javascript
+auth:
+  - id: ff5c47bb-91a4-49c3-8312-6be4aa102203
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: X-API-Key
