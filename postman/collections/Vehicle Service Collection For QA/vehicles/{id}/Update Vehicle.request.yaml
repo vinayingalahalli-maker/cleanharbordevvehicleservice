@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{baseUrl}}/vehicles/:id"
+method: PUT
+headers:
+  Accept: application/json
+pathVariables:
+  id: "2"
+settings: {}
+examples: ./.resources/Update Vehicle.resources/examples
+order: 4000
