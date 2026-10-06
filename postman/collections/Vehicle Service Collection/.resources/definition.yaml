@@ -27,8 +27,15 @@ description: |-
   All requests use the `{{baseUrl}}` variable. Make sure your active environment has `baseUrl` set to the correct server URL before sending requests.
 variables:
   baseUrl: "{{baseUrl}}"
+scripts:
+  - type: http:afterResponse
+    code: |-
+      pm.test("Status code is 200, 201, or 204", function () {
+          pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);
+      });
+    language: text/javascript
 auth:
-  - id: 4c81f37a-4658-4d11-843f-864f6d067eb6
+  - id: ff5c47bb-91a4-49c3-8312-6be4aa102203
     type: apikey
     name: apikey auth
     credentials:

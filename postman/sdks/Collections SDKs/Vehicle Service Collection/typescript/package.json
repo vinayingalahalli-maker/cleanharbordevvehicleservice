@@ -1,0 +1,54 @@
+{
+  "name": "vehicle-service-collection-sdk",
+  "version": "1.0.0",
+  "description": "This collection covers the core CRUD operations for the **Vehicle Service API**, providing a complete set of endpoints to create, retrieve, update, and delete vehicle resources.  ### Endpoints  | Method | Endpoint | Description | |--------|----------|-------------| | `POST` | `/vehicles` | Create a new vehicle | | `GET` | `/vehicles/:id` | Retrieve a vehicle by its ID | | `PATCH` | `/vehicles/:id` | Partially update an existing vehicle | | `PUT` | `/vehicles/:id` | Fully replace an existing vehicle | | `DELETE` | `/vehicles/:id` | Delete a vehicle by its ID |  ### Response Coverage  Each request includes saved examples that cover both success and error scenarios:  - **2xx** — `200 Success`, `201 Created`, `204 No Content` - **4xx** — `400 Missing/Bad Request`, `404 Not Found`, `409 Conflict (Vehicle already exists)` - **5xx** — `500 Unexpected Error`  This makes the collection well-suited for both active development and mock server usage.  ### Configuration  All requests use the `{{baseUrl}}` variable. Make sure your active environment has `baseUrl` set to the correct server URL before sending requests.",
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "browser": "./dist/index.js",
+  "unpkg": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "tsc --noEmit",
+    "build": "tsup-node src/index.ts --format cjs,esm --dts --clean && node -e \"const fs=require('fs');const path=require('path');function fx(s,d){const dir=path.dirname(s);const c=fs.readFileSync(s,'utf8');const p=c.replace(/((?:from|import)\\s*\\(?\\s*[\\x27\\x22])(\\.\\.?\\/[^\\x27\\x22]+?)([\\x27\\x22])/g,(m,a,b,e)=>{if(/\\.[a-zA-Z0-9]+$/.test(b))return m;const suffix=fs.existsSync(path.join(dir,b)+'.d.ts')?'.js':'/index.js';return a+b+suffix+e});fs.writeFileSync(d,p)};fx('dist/index.d.ts','dist/index.d.mts')\"",
+    "prepublishOnly": "chmod +x ./scripts/prepublish.sh && ./scripts/prepublish.sh && npm run build",
+    "test-example": "cd examples && tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "sdk",
+    "api",
+    "client"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": "",
+  "devDependencies": {
+    "typescript": "5.3.3",
+    "@types/node": "^22.14.0",
+    "tsup": "^6.7.0"
+  },
+  "dependencies": {
+    "zod": "3.22.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "endpoints": {
+    "/vehicles": {
+      "post": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\nusing VehicleServiceCollectionSdk.Models;\n\nvar config = new VehicleServiceCollectionSdkConfig{\n    ApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar input = new CreateAVehicleRequest(Optional<string?>.Of(\"The Lisa Marie\"), Optional<string?>.Of(\"4M2DV11W4RDJ53329\"), Optional<string?>.Of(\"Mercury\"), Optional<string?>.Of(\"Villager\"), Optional<string?>.Of(\"1994\"), Optional<long?>.Of(159864));\n\nvar response = await client.VehicleServiceCollectionSdk.CreateAVehicleAsync(input);\n\nConsole.WriteLine(response);\n",
+      "get": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\n\nvar config = new VehicleServiceCollectionSdkConfig{\n    ApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar response = await client.VehicleServiceCollectionSdk.GetAllVehiclesAsync();\n\nConsole.WriteLine(response);\n"
+    },
+    "/vehicles/{id}": {
+      "get": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\n\nvar config = new VehicleServiceCollectionSdkConfig{\n    ApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar response = await client.VehicleServiceCollectionSdk.RetrieveAVehicleAsync(\"1\");\n\nConsole.WriteLine(response);\n",
+      "patch": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\nusing VehicleServiceCollectionSdk.Models;\n\nvar config = new VehicleServiceCollectionSdkConfig{\n    ApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar input = new CreateAVehicleRequest(Optional<string?>.Of(\"The Lisa Marie\"), Optional<string?>.Of(\"4M2DV11W4RDJ53329\"), Optional<string?>.Of(\"Mercury\"), Optional<string?>.Of(\"Villager\"), Optional<string?>.Of(\"1994\"), Optional<long?>.Of(159864));\n\nvar response = await client.VehicleServiceCollectionSdk.UpdateACollectionAsync(input, \"1\");\n\nConsole.WriteLine(response);\n",
+      "delete": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\n\nvar config = new VehicleServiceCollectionSdkConfig{\n    ApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar response = await client.VehicleServiceCollectionSdk.DeleteAVehicleAsync(\"1\");\n\nConsole.WriteLine(response);\n",
+      "put": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\nusing VehicleServiceCollectionSdk.Models;\n\nvar config = new VehicleServiceCollectionSdkConfig{\n    ApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar input = new CreateAVehicleRequest(Optional<string?>.Of(\"The Lisa Marie\"), Optional<string?>.Of(\"4M2DV11W4RDJ53329\"), Optional<string?>.Of(\"Mercury\"), Optional<string?>.Of(\"Villager\"), Optional<string?>.Of(\"1994\"), Optional<long?>.Of(159864));\n\nvar response = await client.VehicleServiceCollectionSdk.UpdateVehicleAsync(input, \"2\");\n\nConsole.WriteLine(response);\n"
+    }
+  },
+  "methodResponses": {
+    "/vehicles": {
+      "post": "Console.WriteLine(response);",
+      "get": "Console.WriteLine(response);"
+    },
+    "/vehicles/{id}": {
+      "get": "Console.WriteLine(response);",
+      "patch": "Console.WriteLine(response);",
+      "delete": "Console.WriteLine(response);",
+      "put": "Console.WriteLine(response);"
+    }
+  },
+  "example": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\nusing Environment = VehicleServiceCollectionSdk.Http.Environment;\n\nvar apiKeyConfig = new ApiKeyAuthConfig(\"YOUR_API_KEY\");\n\nvar config = new VehicleServiceCollectionSdkConfig\n{\n  ApiKeyAuth = apiKeyConfig\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);\n\nvar response = await client.VehicleServiceCollectionSdk.GetAllVehiclesAsync();\n\nConsole.WriteLine(response);\n",
+  "authentication": {
+    "apiKey": {
+      "constructor": "using VehicleServiceCollectionSdk;\nusing VehicleServiceCollectionSdk.Config;\n\nvar config = new VehicleServiceCollectionSdkConfig()\n{\n\tApiKeyAuth = new ApiKeyAuthConfig(\"YOUR_API_KEY\")\n};\n\nvar client = new VehicleServiceCollectionSdkClient(config);",
+      "setter": "client.SetApiKey(\"YOUR_API_KEY\")"
+    }
+  }
+}

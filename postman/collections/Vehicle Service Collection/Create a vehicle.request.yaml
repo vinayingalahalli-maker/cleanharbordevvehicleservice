@@ -15,6 +15,29 @@ body:
       "year": "1994",
       "miles": 159864
     }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 201", function () {
+          pm.response.to.have.status(201);
+      });
+
+      pm.test("Response has JSON body", function () {
+          pm.response.to.be.json;
+      });
+
+      pm.test("Response contains vehicle fields", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("vin");
+          pm.expect(json).to.have.property("make");
+          pm.expect(json).to.have.property("model");
+      });
+
+      pm.test("VIN is a string", function () {
+          const json = pm.response.json();
+          pm.expect(json.vin).to.be.a("string");
+      });
+    language: text/javascript
 settings: {}
 examples: ./.resources/Create a vehicle.resources/examples
 order: 1000

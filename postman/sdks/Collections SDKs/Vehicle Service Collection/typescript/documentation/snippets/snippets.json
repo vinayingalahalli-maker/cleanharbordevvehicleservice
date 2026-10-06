@@ -1,0 +1,33 @@
+{
+  "endpoints": {
+    "/vehicles": {
+      "post": "import { CreateAVehicleRequest, VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  \n  const createAVehicleRequest: CreateAVehicleRequest = {\t\n    nickName: \"The Lisa Marie\",\n    vin: \"4M2DV11W4RDJ53329\",\n    make: \"Mercury\",\n    model: \"Villager\",\n    year: \"1994\",\n    miles: 159864\n  };\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.createAVehicle(createAVehicleRequest);\n\n  console.log(data);\n})();\n",
+      "get": "import { VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.getAllVehicles();\n\n  console.log(data);\n})();\n"
+    },
+    "/vehicles/{id}": {
+      "get": "import { VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.retrieveAVehicle(\"1\");\n\n  console.log(data);\n})();\n",
+      "patch": "import { CreateAVehicleRequest, VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  \n  const createAVehicleRequest: CreateAVehicleRequest = {\t\n    nickName: \"The Lisa Marie\",\n    vin: \"4M2DV11W4RDJ53329\",\n    make: \"Mercury\",\n    model: \"Villager\",\n    year: \"1994\",\n    miles: 159864\n  };\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.updateACollection(\n  \"1\",\n  createAVehicleRequest\n);\n\n  console.log(data);\n})();\n",
+      "delete": "import { VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.deleteAVehicle(\"1\");\n\n  console.log(data);\n})();\n",
+      "put": "import { CreateAVehicleRequest, VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  \n  const createAVehicleRequest: CreateAVehicleRequest = {\t\n    nickName: \"The Lisa Marie\",\n    vin: \"4M2DV11W4RDJ53329\",\n    make: \"Mercury\",\n    model: \"Villager\",\n    year: \"1994\",\n    miles: 159864\n  };\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.updateVehicle(\n  \"2\",\n  createAVehicleRequest\n);\n\n  console.log(data);\n})();\n"
+    }
+  },
+  "methodResponses": {
+    "/vehicles": {
+      "post": "{  }",
+      "get": "{  }"
+    },
+    "/vehicles/{id}": {
+      "get": "{  }",
+      "patch": "{  }",
+      "delete": "'test-value'",
+      "put": "{  }"
+    }
+  },
+  "example": "import { VehicleServiceCollectionSdk } from 'vehicle-service-collection-sdk';\n\n(async () => {\n  const vehicleServiceCollectionSdk = new VehicleServiceCollectionSdk({\n\tapiKey: 'YOUR_API_KEY',\n});\n\n  const data = await vehicleServiceCollectionSdk.vehicleServiceCollectionSdk.getAllVehicles();\n\n  console.log(data);\n})();\n",
+  "authentication": {
+    "apiKey": {
+      "constructor": "const sdk = new VehicleServiceCollectionSdk({ apiKey: 'YOUR_API_KEY' });",
+      "setter": "const sdk = new VehicleServiceCollectionSdk();\nsdk.apiKey = 'YOUR_API_KEY';"
+    }
+  }
+}

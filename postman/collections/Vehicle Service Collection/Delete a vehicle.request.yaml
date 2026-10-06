@@ -5,6 +5,17 @@ headers:
   Accept: application/json
 pathVariables:
   id: "1"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Status code is 200 or 204", function () {
+          pm.expect(pm.response.code).to.be.oneOf([200, 204]);
+      });
+
+      pm.test("Response time is under 2000ms", function () {
+          pm.expect(pm.response.responseTime).to.be.below(2000);
+      });
+    language: text/javascript
 settings: {}
 examples: ./.resources/Delete a vehicle.resources/examples
 order: 4000

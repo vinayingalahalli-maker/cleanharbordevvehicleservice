@@ -25,7 +25,7 @@ response:
     type: json
     content: |-
       {
-        "id": {{$randomUUID}},
+        "id": 1,
         "nickName": "The Lisa Marie",
         "vin": "4M2DV11W4RDJ53329",
         "make": "Mercury",

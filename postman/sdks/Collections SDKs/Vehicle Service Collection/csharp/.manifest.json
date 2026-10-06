@@ -1,0 +1,175 @@
+{
+  "sdkGenVersion": "3.0.0",
+  "resolvedGeneratorVersion": "3.0.0",
+  "date": "2026-10-06T05:32:35.242Z",
+  "config": {
+    "schemaVersion": "sdk-config-ir/v1",
+    "source": {
+      "specs": [
+        {
+          "specUrl": "https://us-prod-sdk-gen-api-specs.s3.us-east-1.amazonaws.com/one-off/collections/1f255cfd-356a-4008-9131-5971c5314b86.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LJBU7KZVUOPBU%2F20261006%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261006T053235Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECUaCXVzLWVhc3QtMSJHMEUCIGWfbvO3JbVodfUJ4rZDZF9kqS5EFryF67D%2BKVo6h9xsAiEArUqShLqSNgK2DS6qgUbgXML1nT4buZmI6Z72vQhVmEQqnAUI7f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjM2NTIxNTgiDHs4DdNFdjSWZKPO4CrwBDssFxj0OjhOAG3iFfsiMqgok689J0bR0EKEq%2FnMoVAK4MT2gvc1v0iCMTTD8LNZlUobOnl2%2FKyTJi37iBnCUWTb79IFHy4WyB14B1Y%2BHnMePCkXnJQH8dtGQ%2BmHVqwOrKV2VEZMVCqscCYKKC2eOm00KYyVcK7MVjKok%2BttxngDPk8vfuUiQzALfkpqSXCPEA%2F6HFqVL%2FMGbP%2Bz5wMsPkzDw1Au7%2BX931Zg76%2FAxwlb6u1uBr7G8gdpRklnKBk5wIRLIuu0hqFXD%2FlRWruISls8l0rrwNiYzuDvOBNT%2BiB69LxeCEachdzOu3lfNt4WKkXorDckhGEoQ4l%2FqSvayXTpgzHj0%2F%2FU8rfyHT9eHA%2FO%2BXdwEj1kh67qwPqKO%2FJ2WS%2BeKjiH%2BRqRTdNA36RGvOPmeFoZz8p5h5F44t04OiQxolZhub9hxIg%2B%2BAaUPmb6RFTD9rQtK%2FlIOOO%2F6Z01z4Kt2QM6zGAF4TfDAwz2L%2Fsl2K53%2BEMYroomz9X1CwSpvoM3%2F7dNTKHpE%2BImBcUoWVhh3o3SHpewucUhXcXjiUfRn%2FAgS9hsfgf48Gcb5RSMEspya2Z%2B%2Bm4es6eU%2BydLlohw91FlNIT5Dlq8foABKsnEejE5%2BPu%2BD1DBhn3ClBPB7OhzcxUTbPTSwrQ07FQqRoA3fYuxTECNEc%2BCoAXVrsDR%2BFm0VBD9YxibIOZjTjjrU8h1N4UhoqVa1%2BuT5jdsPyR9zqmbnVWyG5qqPwXudxelbrOOPQ4RoyXlszokCJBhHfp%2BvT0zP053yZd5QEqBO9Incio%2BV9VEDrVJxQlHTh%2F40o0u3VIcWzuTSxrt98HtnjDE%2FZHWBjqZAf78iAZ9f2wv3nzs6yYcstr%2B%2FrgG5%2FtELZIOImi37DlDlk0wCRBG1P1G3l36GwLJSoBEYskOqjX9Ho258X%2Bldd8BdhN1KIHZ8TwkJ%2B3hBJ1QDFfUYwDo4Mk0I2NkwH%2FqrH3QZE%2B1Pmgj6ONLFDsFOQSJZWXD8LFpG1j67WF5OyPrYFDgDVzYl59JlOKAuruen4I8c76sfVOxoQ%3D%3D&X-Amz-Signature=9aa1c7eb1b772d382a1d922e30f999d9ea77c6aeb67e2a8732f45e4d2ecc146a&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "specType": "postman"
+        }
+      ]
+    },
+    "target": {
+      "language": "csharp",
+      "sourceOrigin": "postman",
+      "sdkName": "vehicle-service-collection-sdk",
+      "sdkVersion": "1.0.0"
+    },
+    "api": {
+      "baseUrl": "",
+      "environments": [],
+      "environmentVariables": []
+    },
+    "client": {
+      "retry": {
+        "enabled": true,
+        "maxAttempts": 3,
+        "retryDelayMs": 150,
+        "maxDelayMs": 5000,
+        "jitterMs": 50,
+        "backoffFactor": 2,
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "HEAD",
+          "OPTIONS"
+        ],
+        "maxRetryAfterDelayMs": 60000
+      },
+      "responseHeaders": false,
+      "responseValidation": false,
+      "multiTenant": false,
+      "additionalConstructorParameters": []
+    },
+    "package": {},
+    "output": {
+      "delivery": "zip",
+      "credentialResolution": "refs-only"
+    },
+    "docs": {},
+    "generation": {
+      "includeWatermark": false,
+      "ai": false,
+      "buildAllModels": false,
+      "inferServiceNames": false,
+      "includeDeprecatedOperations": true,
+      "multipleResponses": false,
+      "generateFullProject": false,
+      "devContainer": false,
+      "allowMockClient": false,
+      "serialization": {
+        "enumRepresentation": "union"
+      },
+      "language": {
+        "csharp": {
+          "useOptionalWrapper": true
+        }
+      }
+    }
+  },
+  "files": [
+    "VehicleServiceCollectionSdk/VehicleServiceCollectionSdk.csproj",
+    "install.sh",
+    ".github/workflows/release.yml",
+    "VehicleServiceCollectionSdk/Services/BaseService.cs",
+    "VehicleServiceCollectionSdk/Http/Handlers/TokenHandler.cs",
+    "Example/Example.csproj",
+    "Example/Program.cs",
+    "Example/.gitignore",
+    "VehicleServiceCollectionSdk/Http/Serialization/SerializationStyle.cs",
+    "VehicleServiceCollectionSdk/Http/Serialization/QuerySerializationStyle.cs",
+    "VehicleServiceCollectionSdk/Http/Serialization/PathSerializationStyle.cs",
+    "VehicleServiceCollectionSdk/Http/Serialization/Serializer.cs",
+    "VehicleServiceCollectionSdk/Http/RequestBuilder.cs",
+    "VehicleServiceCollectionSdk/Config/VehicleServiceCollectionSdkConfig.cs",
+    "VehicleServiceCollectionSdk/Config/ApiKeyAuthConfig.cs",
+    "VehicleServiceCollectionSdk/Config/RequestConfig.cs",
+    "VehicleServiceCollectionSdk/Config/RetryConfig.cs",
+    "VehicleServiceCollectionSdk/Http/Environment.cs",
+    "VehicleServiceCollectionSdk/Models/Optional.cs",
+    "VehicleServiceCollectionSdk/VehicleServiceCollectionSdkClient.cs",
+    "documentation/snippets/snippets.json",
+    "documentation/models/CreateAVehicleRequest.md",
+    "Example/README.md",
+    "VehicleServiceCollectionSdk/Http/ApiException.cs",
+    "VehicleServiceCollectionSdk/Http/Exceptions/ApiTimeoutException.cs",
+    "VehicleServiceCollectionSdk/Http/Exceptions/ApiConnectionException.cs",
+    "VehicleServiceCollectionSdk/Http/Extensions/HttpResponseMessageExtensions.cs",
+    "VehicleServiceCollectionSdk/Http/Extensions/MultipartFormDataContentExtensions.cs",
+    "VehicleServiceCollectionSdk/Http/Extensions/UriExtensions.cs",
+    "VehicleServiceCollectionSdk/Http/ContentTypes.cs",
+    "VehicleServiceCollectionSdk/Http/Client.cs",
+    "VehicleServiceCollectionSdk/Http/Types.cs",
+    "VehicleServiceCollectionSdk/Http/Request.cs",
+    "VehicleServiceCollectionSdk/Validation/CreateAVehicleRequestValidator.cs",
+    "VehicleServiceCollectionSdk/Http/ValidationException.cs",
+    "VehicleServiceCollectionSdk/Validation/FloatValidator.cs",
+    "VehicleServiceCollectionSdk/Validation/NumberValidator.cs",
+    "VehicleServiceCollectionSdk/Validation/StringValidator.cs",
+    "VehicleServiceCollectionSdk/Validation/Collections/ListValidator.cs",
+    "VehicleServiceCollectionSdk/Validation/Extensions/ValidationExtensions.cs",
+    "VehicleServiceCollectionSdk/Http/Handlers/RetryHandler.cs",
+    "VehicleServiceCollectionSdk/.gitignore",
+    ".env.example",
+    "VehicleServiceCollectionSdk/Models/CreateAVehicleRequest.cs",
+    "VehicleServiceCollectionSdk/Services/VehicleServiceCollectionSdkService.cs",
+    "documentation/services/VehicleServiceCollectionSdkService.md",
+    "README.md"
+  ],
+  "fileHashes": {
+    ".env.example": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".github/workflows/release.yml": "17c518cd2f1608a694aadccd0137aff84c4413346b3c50dcb55fc743add98b54",
+    "Example/.gitignore": "7e518f111757684ca534d62362313d696716ac2580812a6f6a824b966464fa47",
+    "Example/Example.csproj": "3978a21b252a598b47c0cf3fe83a01f59101b04f709ebd18cdf2e12a94ea932a",
+    "Example/Program.cs": "3498180f744590a07a19fff1e0f2c64c183063d85483cba103c7a04a18dd2116",
+    "Example/README.md": "0147ad6da9a36ae9f565e056dfb19e14c4f4bcd42c244647e4057f758758777f",
+    "README.md": "7a94d3fcdfd8551c237666587728f8ea5aa534f12fcd671f345809885b3caee9",
+    "VehicleServiceCollectionSdk/.gitignore": "7e518f111757684ca534d62362313d696716ac2580812a6f6a824b966464fa47",
+    "VehicleServiceCollectionSdk/Config/ApiKeyAuthConfig.cs": "55ecaf3e77a131da46fe0a6f62386ba8d29881ff15c6fdd8718b575e3aa19985",
+    "VehicleServiceCollectionSdk/Config/RequestConfig.cs": "b0675e9e543981df1dcb93650dec3e1bd95af0aba97d09ae1126d1a365d646d4",
+    "VehicleServiceCollectionSdk/Config/RetryConfig.cs": "9f25735b6855c5863705721e21a5f9f7a354795bb7e8d774757b423e8de4ca25",
+    "VehicleServiceCollectionSdk/Config/VehicleServiceCollectionSdkConfig.cs": "66b5cd55ccb6f7cc46cc1be39e601e34b79d64297452ab6586901ce1cc9bd84e",
+    "VehicleServiceCollectionSdk/Http/ApiException.cs": "67a9c89fa4a6c2e8949f1d242c577bd1bfca4bf3381da01f6adee847d4b8c864",
+    "VehicleServiceCollectionSdk/Http/Client.cs": "dbddf9dc31c7ef5d9ec79846663ef2a985ee361b14f39c6a528f792329a33e30",
+    "VehicleServiceCollectionSdk/Http/ContentTypes.cs": "ae1ee520b0d56922ea1e0c6868571922bb7cd9069757d39e4855f9903c5bb875",
+    "VehicleServiceCollectionSdk/Http/Environment.cs": "55979f16a9364985aa4a745eecc7cb52b23bfb356346aef82e223ece24c9a6a4",
+    "VehicleServiceCollectionSdk/Http/Exceptions/ApiConnectionException.cs": "44b9bf91d9546add359533a9c9784b774892c760611373fb1afadf71d434d764",
+    "VehicleServiceCollectionSdk/Http/Exceptions/ApiTimeoutException.cs": "02b5335d5cd7aafb49d198961fe944c0f244d6faf5918f80362d23237e47ee75",
+    "VehicleServiceCollectionSdk/Http/Extensions/HttpResponseMessageExtensions.cs": "43351d719d4806f47329d7c2b756496927f2ca17c8613f4925d5b29b62bbae1d",
+    "VehicleServiceCollectionSdk/Http/Extensions/MultipartFormDataContentExtensions.cs": "18329e097e46c5fa79709ee8f96d70afd63107b065a066c094552f5a21c748c3",
+    "VehicleServiceCollectionSdk/Http/Extensions/UriExtensions.cs": "af9e92978afc26809014ee4d968547edc9201c89207b4848e16793691a595097",
+    "VehicleServiceCollectionSdk/Http/Handlers/RetryHandler.cs": "d52a97ee2905a94772a3cf3e503bb50b3a3de58305d2ad9e9921e8ffd86f095a",
+    "VehicleServiceCollectionSdk/Http/Handlers/TokenHandler.cs": "ee2fbfdc64d24e1f8ae8052513abf6bf293424a36b4f7552a22ed43d038b9775",
+    "VehicleServiceCollectionSdk/Http/Request.cs": "ddea5d10fe599c20721173bb1f6843210e2aa816c9e16cf7b07759322638ead5",
+    "VehicleServiceCollectionSdk/Http/RequestBuilder.cs": "5d50b427355f3b53ae51ee67c725177ea054a66ec608bcea23d11c6bba6a7d6f",
+    "VehicleServiceCollectionSdk/Http/Serialization/PathSerializationStyle.cs": "6cce9b666ffa7c31ee8745c59d15a924714fbfca05e0e019de9ef57b2556990f",
+    "VehicleServiceCollectionSdk/Http/Serialization/QuerySerializationStyle.cs": "f6059a2a0a93848acafe7235d938bbe61c44ab25f4fe3d4c4bdd275e581f22e0",
+    "VehicleServiceCollectionSdk/Http/Serialization/SerializationStyle.cs": "09dca57de612b89edfbcea77553eb04ff04bca1d9976830802b78dce90c1e3c7",
+    "VehicleServiceCollectionSdk/Http/Serialization/Serializer.cs": "c4d0091eb55e8cc47c480a78ec896cb623c83dcbc2fdc2cca9d710f129b8c4b5",
+    "VehicleServiceCollectionSdk/Http/Types.cs": "5281986a581d6694db04eec78fcb521b7d74882ff8230b05ebadd31f16c25665",
+    "VehicleServiceCollectionSdk/Http/ValidationException.cs": "d67750ad0d33562835bd3552c9042423845e79a4d9d3e4afa25675fe993a19c0",
+    "VehicleServiceCollectionSdk/Models/CreateAVehicleRequest.cs": "23a78054b1f4359865901767ff73bb8ee99770f07c48cc853db9c2a1d762c40b",
+    "VehicleServiceCollectionSdk/Models/Optional.cs": "885d4589993930cc11b199b7bfeec7239ee67f82cc8e238cf6cd881c4df02128",
+    "VehicleServiceCollectionSdk/Services/BaseService.cs": "5b543ca43d0e1128718b5f3eb21b3bc7b8b4e54fb8e5451723e323b765424fd7",
+    "VehicleServiceCollectionSdk/Services/VehicleServiceCollectionSdkService.cs": "5b703ff2056b678de5ff53cd4848a8299b2a29e1f26ba40ba6684ed13c9bd531",
+    "VehicleServiceCollectionSdk/Validation/Collections/ListValidator.cs": "3363e4fcacbaa3918eb9932df6c2a34dff287af0edf772b2968ae1e8eb09f0bf",
+    "VehicleServiceCollectionSdk/Validation/CreateAVehicleRequestValidator.cs": "87e94af9b38a8c875c5f9b9d7eff612dcd823f28078966018839d19f3051df05",
+    "VehicleServiceCollectionSdk/Validation/Extensions/ValidationExtensions.cs": "f388775d97a88a89c3821858194edbb43e7e4f4258199a03554609582b5dafbd",
+    "VehicleServiceCollectionSdk/Validation/FloatValidator.cs": "08f09abfe8d6aad67a1289af18437604787b3ec8b020ce61425969e32d1b9f3f",
+    "VehicleServiceCollectionSdk/Validation/NumberValidator.cs": "595b1b86313e84e72cb9585d41976764db93b2b2a473e38f1867cea68225f554",
+    "VehicleServiceCollectionSdk/Validation/StringValidator.cs": "28508c8bdac1f6bf641dff73e83eba2eab70f59140b112d06241945ffbc76854",
+    "VehicleServiceCollectionSdk/VehicleServiceCollectionSdk.csproj": "06540b32c515cd62f54cfab1505060833ab93f7242626c874b0aef982c7b2eae",
+    "VehicleServiceCollectionSdk/VehicleServiceCollectionSdkClient.cs": "d4552a4e13595ff0168449766d08335d520f05dd9f95d146a71a6e899693c91d",
+    "documentation/models/CreateAVehicleRequest.md": "bc2ce484ba059789101dfe0319bb2341fc8f7bdb1d28e3682eb71a81824e34a1",
+    "documentation/services/VehicleServiceCollectionSdkService.md": "e7062771d78197d9041c725d228a3a73cf38b06465a26956678e931642b17de5",
+    "documentation/snippets/snippets.json": "86d551916d01cf0c03c1ec18833028f2bbc9c8c06284dab23b9212ed1a798d6f",
+    "install.sh": "b8dd62ba8693b8f1a5f6926e61e89ab8fce15854c576ec05e2c4a4f40dd4ec5c",
+    "prettier.config.cjs": "b3f990b4c84640a705ded29e3343d8e3d70ddc4b88431d10d47c23f568470cfd"
+  }
+}
